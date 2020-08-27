@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IlovEat.Pages.Login.SignUp">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Dados do usuário" FontSize="Title" HorizontalOptions="Center"/>
+            <Frame CornerRadius="10" HasShadow="True" Padding="20" Margin="10" BorderColor="AliceBlue">
+                <StackLayout >
+                    <Label HorizontalOptions="CenterAndExpand" Text="Nome" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Entry x:Name="userName" Placeholder="Nome" Text="{Binding Nome}"/>
+                    <Label HorizontalOptions="CenterAndExpand" Text="Email" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Entry x:Name="userEmail" Placeholder="E-mail" Text="{Binding Email}"/>
+                    <Label HorizontalOptions="CenterAndExpand" Text="Senha" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Entry x:Name="userPassword" IsPassword="True" Placeholder="Senha" Text="{Binding Senha}"/>
+                    <Label HorizontalOptions="CenterAndExpand" Text="Confirmar Senha" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <Entry x:Name="userConfirmationPassword" IsPassword="True" Placeholder="Confirmar Senha" Text="{Binding ConfirmarSenha}"/>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="BtnSignUp" Text="Confirmar cadastro" Padding="20" Margin="10" Command="{Binding SignUp} "/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

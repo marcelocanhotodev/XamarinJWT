@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="IlovEat.Pages.Login.Login"
+             BackgroundColor="Wheat">
+    <ContentPage.Content>
+        <StackLayout Padding="30" VerticalOptions="Center" >
+            <Frame BackgroundColor="LightYellow" HasShadow="false" VerticalOptions="Center" CornerRadius="5" >
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Login" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                    <Entry Placeholder="E-mail" Text="{Binding Email}" >
+                       <Entry.Behaviors>
+                            <behaviorPack:EmailValidationBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True"/>
+                </StackLayout>
+            </Frame>
+            <Button Text="Logar" CornerRadius="5" BackgroundColor="LawnGreen" Command="{Binding SubmitCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

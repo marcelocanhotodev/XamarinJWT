@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IlovEat.Pages.Welcome"
+             BackgroundImageSource="homeimage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="End" >
+            <Button BackgroundColor="#E60023"
+                    TextColor="White" x:Name="BtnCadastrar" Text="Cadastrar-se" Clicked="BtnCadastrar_Clicked" CornerRadius="20" Padding="10" Margin="5, 0, 5, 5" />
+            <Button BackgroundColor="White"
+                    TextColor="#E60023" x:Name="BtnAcessar" Text="Acessar" Clicked="BtnAcessar_Clicked" CornerRadius="20" Padding="10" Margin="5, 0, 5, 5" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
